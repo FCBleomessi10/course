@@ -1,0 +1,23 @@
+server:
+  servlet:
+    context-path: /content
+  port: 63040
+spring:
+  application:
+    name: content-api
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://139.196.149.231:3306/course_content?serverTimezone=UTC&useUnicode=true&useSSL=false&characterEncoding=utf8
+    username: root
+    password: mysql
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+logging:
+  config: classpath:log4j2-dev.xml
+swagger:
+  title: "内容管理系统"
+  description: "对课程相关信息进行管理"
+  base-package: com.shu.content
+  enabled: true
+  version: 1.0.0
